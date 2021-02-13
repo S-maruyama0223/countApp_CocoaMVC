@@ -14,6 +14,7 @@
 		E4C0ACDC25D6C4DA00F29885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C0ACDB25D6C4DA00F29885 /* Assets.xcassets */; };
 		E4C0ACDF25D6C4DA00F29885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C0ACDD25D6C4DA00F29885 /* LaunchScreen.storyboard */; };
 		E4C0ACEA25D6C6E800F29885 /* CountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0ACE925D6C6E800F29885 /* CountModel.swift */; };
+		E4C0ACEF25D73B1F00F29885 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0ACEE25D73B1F00F29885 /* CountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E4C0ACDE25D6C4DA00F29885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4C0ACE025D6C4DA00F29885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C0ACE925D6C6E800F29885 /* CountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountModel.swift; sourceTree = "<group>"; };
+		E4C0ACEE25D73B1F00F29885 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				E4C0ACE825D6C6D400F29885 /* Model */,
 				E4C0ACD225D6C4D800F29885 /* AppDelegate.swift */,
+				E4C0ACED25D73A9D00F29885 /* View */,
 				E4C0ACD425D6C4D800F29885 /* SceneDelegate.swift */,
 				E4C0ACD625D6C4D800F29885 /* ViewController.swift */,
 				E4C0ACD825D6C4D800F29885 /* Main.storyboard */,
@@ -76,6 +79,14 @@
 				E4C0ACE925D6C6E800F29885 /* CountModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E4C0ACED25D73A9D00F29885 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4C0ACEE25D73B1F00F29885 /* CountView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 				E4C0ACD725D6C4D800F29885 /* ViewController.swift in Sources */,
 				E4C0ACEA25D6C6E800F29885 /* CountModel.swift in Sources */,
 				E4C0ACD325D6C4D800F29885 /* AppDelegate.swift in Sources */,
+				E4C0ACEF25D73B1F00F29885 /* CountView.swift in Sources */,
 				E4C0ACD525D6C4D800F29885 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
