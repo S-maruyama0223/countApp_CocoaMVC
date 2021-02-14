@@ -9,24 +9,24 @@
 import UIKit
 
 final class CountView: UIView {
-    let label: UILabel
-    let minusButton: UIButton
-    let plusButton: UIButton
-    
-    required init?(coder aDecoder: NSCoder) {
-        // ここで初期化しないとエラーになるが…なぜ？というかこのinitはいつ呼ばれる？
-        self.label = UILabel()
-        self.minusButton = UIButton()
-        self.plusButton = UIButton()
-        super.init(coder:aDecoder)
-    }
-    
-    override init(frame:CGRect) {
-        // ここで画面レイアウトするというが、self.viewのframeが決まっていないのにどうやって？
-        self.label = UILabel()
-        self.minusButton = UIButton()
-        self.plusButton = UIButton()
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+
+    override init(frame: CGRect) {
         super.init(frame: frame)
+        loadNib()
     }
-    
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        loadNib()
+    }
+
+    private func loadNib() {
+        if let view = Bundle(for: type(of: self)).loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?.first as? UIView {
+            view.frame = self.bounds
+            self.addSubview(view)
+        }
+    }
 }
