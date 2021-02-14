@@ -16,15 +16,14 @@ class ViewController: UIViewController {
             registerModel()
         }
     }
-    // ここでなぜoverrideしたinitが呼ばれる？CountViewのinitの仮引数はどうなった？
-    private(set) lazy var countView: CountView = CountView()
-    
-    override func loadView() {
-        countView.backgroundColor = .systemBackground
-        self.view = countView
-    }
-    
+    @IBOutlet weak var countView: CountView!
+
     deinit {countModel?.notificationCenter.removeObserver(self)}
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        countModel = CountModel()
+    }
     
     private func registerModel() {
         guard let model = countModel else { return }

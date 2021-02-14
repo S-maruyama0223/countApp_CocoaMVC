@@ -15,6 +15,7 @@
 		E4C0ACDF25D6C4DA00F29885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C0ACDD25D6C4DA00F29885 /* LaunchScreen.storyboard */; };
 		E4C0ACEA25D6C6E800F29885 /* CountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0ACE925D6C6E800F29885 /* CountModel.swift */; };
 		E4C0ACEF25D73B1F00F29885 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C0ACEE25D73B1F00F29885 /* CountView.swift */; };
+		E5FF94B125D91E3F00AADD1A /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FF94B025D91E3F00AADD1A /* CountView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E4C0ACE025D6C4DA00F29885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C0ACE925D6C6E800F29885 /* CountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountModel.swift; sourceTree = "<group>"; };
 		E4C0ACEE25D73B1F00F29885 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
+		E5FF94B025D91E3F00AADD1A /* CountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				E4C0ACEE25D73B1F00F29885 /* CountView.swift */,
+				E5FF94B025D91E3F00AADD1A /* CountView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				E4C0ACDF25D6C4DA00F29885 /* LaunchScreen.storyboard in Resources */,
 				E4C0ACDC25D6C4DA00F29885 /* Assets.xcassets in Resources */,
+				E5FF94B125D91E3F00AADD1A /* CountView.xib in Resources */,
 				E4C0ACDA25D6C4D800F29885 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
