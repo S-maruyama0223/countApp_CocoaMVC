@@ -23,9 +23,8 @@ class ViewController: UIViewController {
         countView.backgroundColor = .systemBackground
         self.view = countView
         countModel = CountModel()
+        countModel?.countModelDelegate = self
     }
-    
-    deinit {countModel?.notificationCenter.removeObserver(self)}
     
     private func registerModel() {
         guard let model = countModel else { return }
@@ -35,13 +34,14 @@ class ViewController: UIViewController {
         // これによりVとMはお互いを知らずに済む
         countView.minusButton.addTarget(self, action: #selector(onMinusTapped), for: .touchUpInside)
         countView.plusButton.addTarget(self, action: #selector(onPlusTapped), for: .touchUpInside)
-        model.notificationCenter.addObserver(forName: .init(rawValue: "count"), object: nil, queue: nil, using: {[unowned self] notification in
-            if let count = notification.userInfo?["count"] as? Int{
-                self.countView.label.text = "\(count)"
-            }
-        })
     }
     @objc func onMinusTapped() {countModel?.countDown()}
     @objc func onPlusTapped() {countModel?.countUp()}
+}
+
+extension ViewController: CountModelDelegate {
+    func noticeCount(count:Int) {
+        self.countView.label.text = "\(count)"
+    }
 }
 

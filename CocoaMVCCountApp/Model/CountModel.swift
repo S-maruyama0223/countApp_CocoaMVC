@@ -8,13 +8,15 @@
 
 import Foundation
 
+protocol CountModelDelegate:AnyObject {
+    func noticeCount(count:Int)
+}
+
 final class CountModel {
-    let notificationCenter = NotificationCenter()
+    weak var countModelDelegate:CountModelDelegate?
     private(set) var count = 0 {
         didSet {
-            notificationCenter.post(name: .init(rawValue: "count"),
-            object: nil,
-            userInfo: ["count":count])
+            countModelDelegate?.noticeCount(count: count)
         }
     }
     
