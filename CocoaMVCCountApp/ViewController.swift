@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         guard let model = countModel else { return }
         
         countView.label.text = model.count.description
+        // MとVを繋げるのはControllerの責務なのでこちらでaddTargetを行う。
+        // これによりVとMはお互いを知らずに済む
         countView.minusButton.addTarget(self, action: #selector(onMinusTapped), for: .touchUpInside)
         countView.plusButton.addTarget(self, action: #selector(onPlusTapped), for: .touchUpInside)
         model.notificationCenter.addObserver(forName: .init(rawValue: "count"), object: nil, queue: nil, using: {[unowned self] notification in
