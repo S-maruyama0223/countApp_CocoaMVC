@@ -9,24 +9,25 @@
 import UIKit
 
 final class CountView: UIView {
-    let label: UILabel
-    let minusButton: UIButton
-    let plusButton: UIButton
+    let label: UILabel = UILabel()
+    let minusButton: UIButton = UIButton()
+    let plusButton: UIButton = UIButton()
     
     required init?(coder aDecoder: NSCoder) {
-        // ここで初期化しないとエラーになるが…なぜ？というかこのinitはいつ呼ばれる？
-        self.label = UILabel()
-        self.minusButton = UIButton()
-        self.plusButton = UIButton()
         super.init(coder:aDecoder)
     }
     
     override init(frame:CGRect) {
-        // ここで画面レイアウトするというが、self.viewのframeが決まっていないのにどうやって？
-        self.label = UILabel()
-        self.minusButton = UIButton()
-        self.plusButton = UIButton()
         super.init(frame: frame)
+        // frameは親viewからの相対的な座標軸なので実際のCountのframe値の影響は受けない
+        label.frame = CGRect(x: 180, y: 60, width: 30, height: 30)
+        minusButton.frame = CGRect(x: 120, y: 150, width: 70, height: 70)
+        minusButton.setTitle("➖", for: .normal)
+        plusButton.frame = CGRect(x: 190, y: 150, width: 70, height: 70)
+        plusButton.setTitle("➕", for: .normal)
+        self.addSubview(minusButton)
+        self.addSubview(plusButton)
+        self.addSubview(label)
     }
     
 }

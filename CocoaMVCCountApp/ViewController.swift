@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     override func loadView() {
         countView.backgroundColor = .systemBackground
         self.view = countView
+        countModel = CountModel()
     }
     
     deinit {countModel?.notificationCenter.removeObserver(self)}
